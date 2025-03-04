@@ -13,18 +13,18 @@ services:
         value: mysql
       - key: DB_HOST
         value: db_host
-        sync: false
+
       - key: DB_PORT
         value: "3306"  # 数值建议用引号包裹
       - key: DB_USER
         value: db_user
-        sync: false
+
       - key: DB_PASS
         value: db_password
-        sync: false
+
       - key: DB_NAME
         value: alist
-        sync: false
+
       - key: DB_TABLE_PREFIX
         value: alist_
       - key: CDN
