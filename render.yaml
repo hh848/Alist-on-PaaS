@@ -12,7 +12,7 @@ services:
       - key: DB_TYPE
         value: mysql
       - key: DB_HOST
-        value: db_host
+        sync: true
 
       - key: DB_PORT
         value: "3306"  # 数值建议用引号包裹
