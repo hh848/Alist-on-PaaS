@@ -29,5 +29,5 @@ services:
         value: alist_
       - key: CDN
         value: https://npm.elemecdn.com/alist-web@$version/dist
-    build:
-      dockerfile: https://raw.githubusercontent.com/hh848/Alist-on-PaaS/refs/heads/main/Dockerfile  # 需要添加 Dockerfile 路径
+    #build:
+      dockerfile: Dockerfile  # 需要添加 Dockerfile 路径
