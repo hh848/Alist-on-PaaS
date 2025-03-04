@@ -1,0 +1,33 @@
+services:
+  - type: web
+    name: Deploy
+    env: docker
+    repo: https://github.com/hh848/Alist-PaaS.git  # 请替换为您的仓库地址
+    #region: singapore
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: "5244"
+      - key: DB_TYPE
+        value: postgres
+      - key: DB_HOST
+        value: dpg-cv3mi93qf0us73b0npdg-a.oregon-postgres.render.com
+        #sync: false
+      - key: DB_PORT
+        value: "5432"  # 数值建议用引号包裹
+      - key: DB_USER
+        value: hh
+        #sync: false
+      - key: DB_PASS
+        value: 1odrJzRpt2V6TPh0KrOcCsRDmbjzPzCc
+        #sync: false
+      - key: DB_NAME
+        value: alist-db
+        #sync: false
+      - key: DB_TABLE_PREFIX
+        value: alist_
+      - key: CDN
+        value: https://npm.elemecdn.com/alist-web@$version/dist
+    build:
+      dockerfile: https://raw.githubusercontent.com/hh848/Alist-on-PaaS/refs/heads/main/Dockerfile  # 需要添加 Dockerfile 路径
