@@ -7,27 +7,27 @@ services:
     plan: free
     healthCheckPath: /
     envVars:
-      - key: PORT
+        key: PORT
         value: 3000
-      - key: DB_TYPE
+        key: DB_TYPE
         value: postgres
-      - key: DB_HOST
+        key: DB_HOST
         value: dpg-cv3mi93qf0us73b0npdg-a.oregon-postgres.render.com
         #sync: false
-      - key: DB_PORT
+        key: DB_PORT
         value: "5432"  # 数值建议用引号包裹
-      - key: DB_USER
+        key: DB_USER
         value: hh
         #sync: false
-      - key: DB_PASS
+        key: DB_PASS
         value: 1odrJzRpt2V6TPh0KrOcCsRDmbjzPzCc
         #sync: false
-      - key: DB_NAME
+        key: DB_NAME
         value: alist-db
         #sync: false
-      - key: DB_TABLE_PREFIX
+        key: DB_TABLE_PREFIX
         value: alist_
-      - key: CDN
+        key: CDN
         value: https://npm.elemecdn.com/alist-web@$version/dist
     #build:
       dockerfile: Dockerfile  # 需要添加 Dockerfile 路径
